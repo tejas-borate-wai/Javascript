@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="finish-btn">Finish</button> <br>
+    <button class="add-to-cart-btn">Add To Cart</button>
+    <div class="cart-div"></div>
+
+    <button class="add-btn">Add</button>
+    <button class="remove-btn">remove</button>
+
+
+    <!-- <script>
+        let buttonElement = document.querySelector('.finish-btn');
+
+        buttonElement.addEventListener('click', () => {
+            setTimeout(() => {
+                if (buttonElement.innerText == "Finish") {
+                    buttonElement.innerText = "Finished";
+                } else {
+                    buttonElement.innerText = "Finish";
+                }
+            }, 1000)
+        });
+    </script> -->
+
+    <!-- <script>
+        let buttonElement = document.querySelector('.finish-btn');
+
+        buttonElement.addEventListener('click', () => {
+            setTimeout(() => {
+                buttonElement.innerText = "Finished";
+            }, 1000)
+        });
+
+        buttonElement.addEventListener('click', () => {
+
+            buttonElement.innerText = "loading....";
+
+        });
+    </script> -->
+
+    <!-- <script>
+        let t_id;
+        let add_to_cart_element = document.querySelector('.add-to-cart-btn');
+        let cart_element = document.querySelector('.cart-div');
+
+        add_to_cart_element.addEventListener('click', () => {
+            cart_element.innerHTML = "added";
+
+            clearTimeout(t_id);
+            t_id = setTimeout(() => {
+                cart_element.innerHTML = "";
+            }, 2000)
+
+
+        })
+
+
+    </script> -->
+
+    <!-- <script>
+        let a = 1;
+        let x = setInterval(() => {
+            document.title = `${a} new massages`;
+            a++;
+        }, 1000);
+
+    </script> -->
+
+    <script>
+        let message = 1;
+        let x;
+
+        function startBlinking() {
+            x = setInterval(function () {
+                if (document.title === 'Document') {
+                    document.title = `${message} New messages`;
+                } else {
+                    document.title = 'Document';
+                }
+            }, 1000);
+        }
+
+        function stopBlinking() {
+            clearInterval(x);
+            document.title = 'Document';
+        }
+
+
+        let add_btn = document.querySelector('.add-btn');
+        add_btn.addEventListener('click', () => {
+            clearInterval(x);
+            message += 1;
+            startBlinking()
+        });
+
+        let remove_btn = document.querySelector('.remove-btn');
+        remove_btn.addEventListener('click', () => {
+            if (message > 0) {
+                message -= 1;
+            }
+
+            if (message == 0) {
+                stopBlinking();
+            }
+        })
+
+        startBlinking()
+
+    </script>
+
+
+
+</body>
+
+</html>

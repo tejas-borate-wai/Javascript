@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function greet(name) {
+        //     if (name) {
+        //         console.log("Hello " + name);
+        //     } else {
+        //         console.log("Hello , hie there !!! ");
+        //     }
+        // }
+
+        // greet();
+
+
+        // function celciusToFahrenhait(celcius) {
+        //     let f = (celcius * 9 / 5) + 32;
+        //     return f;
+        // }
+        // console.log(celciusToFahrenhait(25));
+
+
+        // function FahrenhaitTocelcius(Fahrenhait) {
+        //     let c = (Fahrenhait - 32) * 5 / 9;
+        //     return c;
+        // }
+        // console.log(FahrenhaitTocelcius(86));
+
+
+        function convertTemp(cel, unit) {
+            if (unit == "F") {
+                let f = (cel * 9 / 5) + 32;
+                return `${f} F'`;
+            } else if (unit == "C") {
+                let c = (cel - 32) * 5 / 9;
+                return `${c} c'`;
+            }
+        }
+
+        console.log(convertTemp(86, "C"));
+    </script>
+</body>
+
+</html>

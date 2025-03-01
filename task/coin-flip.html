@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="guess('Head')">Head</button>
+    <button onclick="guess('Tail')">Tails</button>
+    <button onclick="resetScore()">Reset</button>
+
+
+    <script>
+        let score = JSON.parse(localStorage.getItem('score')) || {
+            win: 0,
+            loose: 0
+        }
+
+
+        function guess(g) {
+            let randomNumber = Math.random();
+            let result = '';
+
+            if (randomNumber < 0.5) {
+                result = "Head";
+            } else {
+                result = "Tail";
+            }
+
+            console.log("Your guess is", g);
+            console.log("computer guess is", result);
+
+            let gameResult = (result === g) ? "Win" : "Loose";
+            console.log(gameResult);
+            if (gameResult === "Win") {
+                score.win += 1;
+            } else {
+                score.loose += 1;
+            }
+
+            localStorage.setItem("score", JSON.stringify(score));
+
+            alert(`Win : ${score.win}  loose ${score.loose}`)
+
+        }
+
+        function resetScore() {
+            // Clear the score from localStorage
+            localStorage.removeItem("score");
+
+            // Manually reset the score in the JavaScript runtime
+            score = { win: 0, loose: 0 };
+
+            // Update localStorage with the reset score
+            localStorage.setItem("score", JSON.stringify(score));
+
+            // Inform the user and reload to reflect changes
+            alert("Score has been reset!");
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

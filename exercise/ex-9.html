@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="btn-1">9a</button>
+
+    <hr>
+
+    <button class="heads" onclick="document.querySelector('.result').innerText = 'heads'">Heads</button>
+    <button class="tails" onclick="document.querySelector('.result').innerText = 'tails'">Tails</button>
+
+    <p>Button selected is : <b class="result"></b></p>
+
+    <hr>
+
+    <input type="text" name="" id="name-input" placeholder="Enter Name" onkeydown="displayingName(event)">
+    <button onclick="displayName()">Display</button>
+    <p class="name_p"></p>
+
+    <hr>
+
+
+    <script>
+        document.querySelector('.btn-1').innerText = "changed";
+
+        function displayName() {
+            let name = document.querySelector('#name-input').value;
+            alert(`your name is : ${name}`);
+        }
+
+        function displayingName(event) {
+            let name = document.querySelector('#name-input').value;
+            if (event.key === 'Enter') {
+                document.querySelector('.name_p').innerText = `your name is : ${name}`;
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

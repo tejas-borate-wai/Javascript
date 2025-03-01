@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="calculation += 1">1</button>
+    <button onclick="calculation += 2">2</button>
+    <button onclick="calculation += 3">3</button>
+    <button onclick="calculation += 4">4</button>
+    <button onclick="calculation += 5">5</button>
+    <button onclick="calculation += '+'">+</button>
+    <button onclick="calculation += '-'">-</button>
+    <button onclick="console.log(eval(calculation));">=</button>
+
+
+
+    <script>
+        let calculation = '';
+
+        let name = "Tejas";
+        console.log(`my name is : ${name}`);
+
+
+        let itemPrice = 1000;
+        let tax = itemPrice * 0.1;
+
+        console.log("tax : " + tax);
+        console.log("total price after tax : " + (itemPrice + tax));
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sub-button {
+            width: 130px;
+            height: 50px;
+            font-size: 18px;
+            padding: 10px 5px;
+            border-radius: 50px;
+            border: none;
+            background-color: black;
+            color: white;
+            font-weight: bold;
+        }
+
+        .is-sub {
+            background-color: rgb(187, 187, 187);
+            color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <button class="sub-button" onclick="changed()">Subscribe</button>
+
+    <script>
+        // document.querySelector('button').innerHTML = "Click me";
+        console.log(document.querySelector('button'))
+
+        function changed() {
+            let buttonElement = document.querySelector('.sub-button');
+            if (buttonElement.innerText == "Subscribe") {
+                buttonElement.innerText = "Subscribed";
+                buttonElement.classList.add('is-sub');
+
+            }
+            else {
+                buttonElement.innerText = "Subscribe";
+                buttonElement.classList.remove('is-sub');
+            }
+        }
+    </script>
+</body>
+
+</html>

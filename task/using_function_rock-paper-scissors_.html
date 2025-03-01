@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body style="width: auto;text-align: center;margin-top: 300px;">
+
+
+    <p>Rock Paper Scissors Game</p>
+    <button onclick="
+        pickcomputerMove()
+         playGame('rock');
+
+    ">Rock</button>
+
+    <button onclick="
+       pickcomputerMove()
+         playGame('paper');
+
+    ">Paper</button>
+
+    <button onclick="
+        pickcomputerMove();
+        playGame('scissors');
+        
+       
+    ">Scissor</button>
+
+
+    <script>
+        computerMove = '';
+
+        function playGame(move) {
+            result = '';
+
+            if (move == 'scissors') {
+                if (computerMove == 'rock') {
+                    result = 'loose';
+                } else if (computerMove == 'paper') {
+                    result = 'win';
+                } else if (computerMove == 'scissors') {
+                    result = 'tie';
+                }
+
+                alert(`you choose ${move} and computer choose ${computerMove} , so result is ${result}`);
+            }
+
+            if (move == 'rock') {
+                if (computerMove == 'rock') {
+                    result = 'tie';
+                } else if (computerMove == 'paper') {
+                    result = 'loose';
+                } else if (computerMove == 'scissors') {
+                    result = 'win';
+                }
+
+                alert(`you choose ${move} and computer choose ${computerMove} , so result is ${result}`);
+            }
+
+            if (move == 'paper') {
+                if (computerMove == 'rock') {
+                    result = 'win';
+                } else if (computerMove == 'paper') {
+                    result = 'tie';
+                } else if (computerMove == 'scissors') {
+                    result = 'loose';
+                }
+
+                alert(`you choose ${move} and computer choose ${computerMove} , so result is ${result}`);
+            }
+
+        }
+
+
+        function pickcomputerMove() {
+            randomNumber = Math.round(Math.random() * 10);
+            if (randomNumber >= 0 && randomNumber < 3) {
+                computerMove = 'rock';
+            } else if (randomNumber >= 3 && randomNumber < 6) {
+                computerMove = 'paper';
+            } else if (randomNumber >= 6 && randomNumber <= 10) {
+                computerMove = 'scissors';
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

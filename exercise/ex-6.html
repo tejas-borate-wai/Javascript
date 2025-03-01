@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let time = 23;
+        let name = 'Tejas';
+        if (time >= 22 || time < 7) {
+            console.log("Good Night " + name);
+        } else if (time >= 7 && time < 12) {
+            console.log("Good Morning" + name);
+        } else if (time >= 12 && time < 17) {
+            console.log("Good afternoon" + name);
+        } else {
+            console.log("Good evening" + name);
+        }
+    </script>
+
+
+
+    <script>
+        // example 2 
+        let age = 77;
+        let isHoliday = true;
+        if ((age <= 6 || age >= 65) && isHoliday) {
+            console.log("Discount");
+        } else {
+            console.log("No Discount");
+        }
+
+        let x = ((age <= 6 || age >= 65) && isHoliday) ? console.log("Discount") : console.log("No Discount");
+        console.log(x);
+    </script>
+</body>
+
+</html>

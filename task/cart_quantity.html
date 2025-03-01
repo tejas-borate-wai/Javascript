@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#06c1db">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simple cart</title>
+</head>
+
+<body>
+    <button onclick="
+        console.log('Cart value is = ' + cart_value);
+    ">Show Quantity</button>
+
+    <button onclick="
+        if (cart_value + 1 <= 10) {
+            cart_value += 1;
+        } else {
+            alert('Cart is full');
+        }
+        console.log('Cart value is: ' + cart_value);
+    ">Add to cart</button>
+
+    <button onclick="
+        if (cart_value + 2 <= 10) {
+            cart_value += 2;
+        } else {
+            alert('Cart is full');
+        }
+        console.log('Cart value is: ' + cart_value);
+    ">+2</button>
+
+    <button onclick="
+        if (cart_value + 3 <= 10) {
+            cart_value += 3;
+        } else {
+            alert('Cart is full');
+        }
+        console.log('Cart value is: ' + cart_value);
+    ">+3</button>
+
+    <button onclick="
+        console.log('Cart reset');
+        cart_value = 0;
+        console.log('Cart value is: ' + cart_value);
+    ">Reset</button>
+
+    <button onclick="
+        if (cart_value == 0) {
+            console.log('Cart is already empty');
+        } else {
+            cart_value -= 1;
+        }
+        console.log('Cart value is: ' + cart_value);
+    ">Remove from cart</button>
+
+    <script>
+        let cart_value = 0;
+    </script>
+
+</body>
+
+</html>

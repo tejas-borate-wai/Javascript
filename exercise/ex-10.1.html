@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .js-button1,
+        .js-button2,
+        .js-button3 {
+            background-color: rgb(207, 207, 207);
+            font-size: 18px;
+            border: none;
+            padding: 5px 40px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .is-togle {
+            background-color: rgb(255, 78, 78);
+        }
+    </style>
+</head>
+
+<body>
+    <button class="js-button1" onclick="changeProperty('js-button1')">Gaming</button>
+    <button class="js-button2" onclick="changeProperty('js-button2')">Gaming</button>
+    <button class="js-button3" onclick="changeProperty('js-button3')">Gaming</button>
+
+    <script>
+        function changeProperty(className) {
+
+            const button = document.querySelector(`.${className}`);
+
+            if (button.classList.contains('is-togle')) {
+                button.classList.remove('is-togle');
+
+            } else {
+                removeclass();
+                button.classList.add('is-togle');
+            }
+
+        }
+
+        function removeclass() {
+            let button1 = document.querySelector('.is-togle');
+            if (button1) {
+                button1.classList.remove('is-togle');
+            }
+        }
+    </script>
+</body>
+
+</html>

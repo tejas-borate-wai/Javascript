@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let multiply = (a, b) => {
+            console.log(a * b);
+        }
+
+        multiply(10, 2);
+        multiply(7, 2);
+    </script>
+
+    <script>
+        let multiply_one_line = (a, b) => console.log(a * b);
+
+        multiply_one_line(50, 2);
+        multiply_one_line(7, 8);
+    </script>
+
+
+    <script>
+        let arr = [1, 2, -5, -4, 5, -8, 2, 5, 2];
+        let positive_value = 0;
+        arr.forEach((value) => {
+            if (value > 0) {
+                positive_value += 1;
+                console.log(value);
+            }
+        })
+        console.log("positive values are :", positive_value);
+    </script>
+
+
+    <script>
+        function addNum(arr, num) {
+
+            let newarr = arr.map((value) => {
+                return value + num;
+            })
+
+            console.log(newarr);
+        }
+        let arr1 = [1, 2, 5, 4, 8];
+        addNum(arr1, 5);
+    </script>
+
+    <script>
+        function removeEgg(arr, word) {
+            let filtered_arr = arr.filter((value) => {
+                // if (value != word) {
+                return value != word;
+                // }
+            })
+
+            return filtered_arr;
+        }
+
+        let arr2 = ["egg", "hello", "egg", "world", "nye"];
+        console.log(removeEgg(arr2, "egg"));
+    </script>
+</body>
+
+</html>

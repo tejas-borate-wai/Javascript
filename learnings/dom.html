@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sub-button {
+            width: 110px;
+            height: 30px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="sub-button" onclick="changed()">Subscribe</button>
+
+    <script>
+        // document.querySelector('button').innerHTML = "Click me";
+        console.log(document.querySelector('button'))
+
+        function changed() {
+            let buttonElement = document.querySelector('.sub-button');
+            if (buttonElement.innerText == "Subscribe") {
+                buttonElement.innerText = "Subscribed";
+                buttonElement.style.color = "gray";
+            }
+            else {
+                buttonElement.innerText = "Subscribe";
+                buttonElement.style.color = "red";
+            }
+        }
+    </script>
+</body>
+
+</html>

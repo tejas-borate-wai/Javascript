@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body style="width: auto;text-align: center;margin-top: 300px;">
+
+
+    <p>Rock Paper Scissors Game</p>
+    <button onclick="
+        let randomNumber = Math.round(Math.random()*10);
+
+        let computerMove = '';
+
+        if(randomNumber >= 0 && randomNumber <3){
+            computerMove = 'rock';
+        } else if(randomNumber >= 3 && randomNumber <6){
+            computerMove = 'paper';
+        }else if(randomNumber >= 6 && randomNumber <=10){
+            computerMove = 'scissors';
+        }
+        
+        console.log(computerMove);
+        let result = '';
+
+        if(computerMove == 'rock'){
+            result = 'Tie';
+        }else if(computerMove == 'paper'){
+            result = 'lose';
+        }else if(computerMove == 'scissors'){
+            result = 'win';
+        }
+
+        alert(`you choose rock and computer choose ${computerMove} , so result is ${result}`);
+
+    ">Rock</button>
+
+    <button onclick="
+        randomNumber = Math.round(Math.random()*10);
+
+        computerMove = '';
+
+        if(randomNumber >= 0 && randomNumber <3){
+            computerMove = 'rock';
+        } else if(randomNumber >= 3 && randomNumber <6){
+            computerMove = 'paper';
+        }else if(randomNumber >= 6 && randomNumber <=10){
+            computerMove = 'scissors';
+        }
+        
+        console.log(computerMove);
+        result = '';
+
+        if(computerMove == 'rock'){
+            result = 'win';
+        }else if(computerMove == 'paper'){
+            result = 'tie';
+        }else if(computerMove == 'scissors'){
+            result = 'loose';
+        }
+
+        alert(`you choose paper and computer choose ${computerMove} , so result is ${result}`);
+
+    ">Paper</button>
+
+    <button onclick="
+        randomNumber = Math.round(Math.random()*10);
+
+        computerMove = '';
+
+        if(randomNumber >= 0 && randomNumber <3){
+            computerMove = 'rock';
+        } else if(randomNumber >= 3 && randomNumber <6){
+            computerMove = 'paper';
+        }else if(randomNumber >= 6 && randomNumber <=10){
+            computerMove = 'scissors';
+        }
+        
+        console.log(computerMove);
+        result = '';
+
+        if(computerMove == 'rock'){
+            result = 'loose';
+        }else if(computerMove == 'paper'){
+            result = 'win';
+        }else if(computerMove == 'scissors'){
+            result = 'tie';
+        }
+
+        alert(`you choose scissors and computer choose ${computerMove} , so result is ${result}`);
+
+    ">Scissor</button>
+
+
+    <script>
+        if (!0) {
+            console.log("fdbfdfnj")
+        }
+    </script>
+
+</body>
+
+</html>

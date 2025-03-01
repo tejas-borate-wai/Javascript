@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = ['hello', 'search', 'world'];
+        let index = -1;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === "search") {
+                index = i;
+                break;
+            }
+        }
+        console.log(index);
+    </script>
+
+
+    <script>
+        function findIndex(arr, word) {
+            let index = -1;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] === word) {
+                    index = i;
+                    break;
+                }
+            }
+            console.log(index);
+        }
+
+        let arr1 = ['hello', 'hello', 'world'];
+        findIndex(arr1, "search");
+    </script>
+
+</body>
+
+</html>
