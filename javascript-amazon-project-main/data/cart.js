@@ -27,3 +27,13 @@ export function addToCart(product_id) {
     cart.push({ product_id, quantity });
   }
 }
+
+export function removeFromCart(productId) {
+  let newCart = [];
+  cart.forEach((item) => {
+    if (productId != item.id) {
+      newCart.push(item);
+    }
+  });
+  cart = newCart;
+}
