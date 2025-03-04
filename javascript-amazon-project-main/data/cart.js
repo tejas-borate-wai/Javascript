@@ -32,4 +32,20 @@ export function addToCart(product_id) {
 export function removeFromCart(productId) {
   cart = cart.filter((item) => item.id !== productId);
   saveToStorage();
+  checkoutQuantity();
+}
+
+export function updateQuantity(productId, newQuantity) {
+  let matchingItem;
+
+  cart.forEach((cartItem) => {
+    if (productId === cartItem.id) {
+      matchingItem = cartItem;
+    }
+  });
+
+  if (matchingItem) {
+    matchingItem.quantity = newQuantity;
+    saveToStorage();
+  }
 }
