@@ -4,11 +4,15 @@ import {
   updateQuantity,
   updateDeliveryOption,
 } from "../../data/cart.js";
-import { products } from "../../data/products.js";
+import { products, getProduct } from "../../data/products.js";
 import { formatCurrency } from "../utils/currency_converter.js";
 import { hello } from "https://unpkg.com/supersimpledev@1.0.1/hello.esm.js";
 import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js";
-import { deliveryOptions } from "../../data/deleveryOptions.js";
+import {
+  deliveryOptions,
+  getDeliveryOption,
+} from "../../data/deleveryOptions.js";
+import { paymentSummery } from "./paymentSummery.js";
 
 export function checkoutOrderSummery() {
   let html = "";
@@ -23,12 +27,7 @@ export function checkoutOrderSummery() {
     });
 
     let deliveryOptionId = cartItem.deliveryOptionId;
-    let deliveryOption;
-    deliveryOptions.forEach((option) => {
-      if (option.id === deliveryOptionId) {
-        deliveryOption = option;
-      }
-    });
+    let deliveryOption = getDeliveryOption(deliveryOptionId);
 
     let today = dayjs();
     let deliveryDate = today.add(deliveryOption.deliveryDays, "days");
@@ -136,6 +135,8 @@ export function checkoutOrderSummery() {
       if (productContainer) {
         productContainer.remove();
       }
+
+      paymentSummery();
     });
   });
 
@@ -165,6 +166,7 @@ export function checkoutOrderSummery() {
 
       updateQuantity();
       checkoutQuantity();
+      paymentSummery();
     });
   });
 
@@ -187,6 +189,7 @@ export function checkoutOrderSummery() {
         `.js-cart-item-container-${productId}`
       );
       container.classList.add("is-editing-quantity");
+      paymentSummery();
     });
   });
 
@@ -210,6 +213,7 @@ export function checkoutOrderSummery() {
           `.js-cart-item-container-${productId} .delivery-date`
         ).innerText = `Delivery date: ${dateString}`;
       }
+      paymentSummery();
     });
   });
 }
