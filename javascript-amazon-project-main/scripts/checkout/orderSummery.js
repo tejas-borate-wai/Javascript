@@ -22,7 +22,7 @@ export function checkoutOrderSummery() {
     products.forEach((productItem) => {
       if (productItem.id === cartItem.id) {
         matchingItem = productItem;
-        console.log(matchingItem);
+        // console.log(matchingItem);
       }
     });
 
