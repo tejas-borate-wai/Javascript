@@ -22,7 +22,6 @@ export function checkoutOrderSummery() {
     products.forEach((productItem) => {
       if (productItem.id === cartItem.id) {
         matchingItem = productItem;
-        // console.log(matchingItem);
       }
     });
 
